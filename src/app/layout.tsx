@@ -25,6 +25,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  let test = false;
   return (
     <RecipesProvider>
       <DrinksProvider>
@@ -32,7 +33,7 @@ export default function RootLayout({
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >
-            <Header />
+            <Header isLoginPage={test} />
             {children}
           </body>
         </html>

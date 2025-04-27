@@ -1,3 +1,9 @@
+import { Login } from '@/components/Login';
+
 export default function Home() {
-  return <h1 className="text-red-500">OLÁ</h1>;
+  return (
+    <section className="flex items-start justify-start p-4">
+      <Login />
+    </section>
+  );
 }
