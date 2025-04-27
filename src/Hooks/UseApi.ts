@@ -10,6 +10,7 @@ export const getDrinksByCategory = async (category: string) => {
       throw new Error(`Erro na requisição: ${response.statusText}`);
     }
     const data = await response.json();
+    console.log('data', data)
 
     return data;
   } catch (error) {
@@ -17,6 +18,24 @@ export const getDrinksByCategory = async (category: string) => {
     return null;
   }
 };
+
+export const getDrinksCategories = async() =>{
+  try {
+    const response = await fetch(
+     'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
+      )
+
+    if (!response.ok) {
+      throw new Error(`Erro na requisição: ${response.statusText}`);
+    }
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error('Erro ao buscar drinks:', error);
+    return null;
+  }
+}
 
 export const getMealByCategory = async (category: string) => {
   try {
