@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header';
 import { DrinksProvider } from '@/context/DrinksContext';
 import { RecipesProvider } from '@/context/RecipesContext';
 import type { Metadata } from 'next';
@@ -31,6 +32,7 @@ export default function RootLayout({
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >
+            <Header />
             {children}
           </body>
         </html>
