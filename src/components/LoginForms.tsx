@@ -1,3 +1,5 @@
+'use client';
+
 import {
   ChefHat,
   Cookie,
@@ -7,8 +9,16 @@ import {
   Utensils,
   UtensilsCrossed,
 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-export const Login = () => {
+export const LoginForms = () => {
+  const router = useRouter();
+
+  const handleClickInloginButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push('/home');
+  };
+
   return (
     <div className="md:p-32">
       <section className="w-full flex md:items-start md:sjustify-start flex-col flex-wrap">
@@ -23,7 +33,7 @@ export const Login = () => {
             creativity.
           </h4>
         </div>
-        <div className="w-full md:h-[500px] sm:h-full border-2 border-red-900 rounded-lg flex items-center justify-around  gap-8 md:p-8 p-2 shadow-md flex-wrap md:flex-nowrap">
+        <div className="w-full md:h-[500px] sm:h-full border-2 border-red-900 rounded-lg flex items-center justify-around  gap-8 md:p-8 p-4 shadow-md flex-wrap md:flex-nowrap">
           <section className="flex flex-col w-full gap-4">
             <h1 className="text-red-900 text-3xl">Welcome</h1>
             <form className="flex gap-2 flex-col">
@@ -31,7 +41,10 @@ export const Login = () => {
               <input className="md:w-[400] h-[40px] border-2 border-red-700 rounded-md"></input>
               <label className="text-red-900 font-bold">Password</label>
               <input className="md:w-[400] h-[40px] border-2 border-red-700 rounded-md"></input>
-              <button className="md:w-[400] bg-red-900 mt-4 text-white flex items-center justify-center p-2 font-bold gap-2 rounded-md transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer">
+              <button
+                className="md:w-[400] bg-red-900 mt-4 text-white flex items-center justify-center p-2 font-bold gap-2 rounded-md transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer"
+                onClick={handleClickInloginButton}
+              >
                 Let´s cook
                 <CookingPot />
               </button>
@@ -43,12 +56,12 @@ export const Login = () => {
                 <h1 className="text-7xl">Saborize</h1>
                 <h4>A new cuisine Experience</h4>
                 <div className="flex gap-2 mt-2">
-                  <UtensilsCrossed />
-                  <CookingPot />
-                  <Croissant />
-                  <Cookie />
-                  <ChefHat />
-                  <Microwave />
+                  <UtensilsCrossed className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
+                  <CookingPot className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
+                  <Croissant className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
+                  <Cookie className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
+                  <ChefHat className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
+                  <Microwave className="transition-transform duration-300 ease-in-out hover:-translate-y-1 cursor-pointer" />
                 </div>
               </div>
             </section>

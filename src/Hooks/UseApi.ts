@@ -9,9 +9,7 @@ export const getDrinksByCategory = async (category: string) => {
     if (!response.ok) {
       throw new Error(`Erro na requisição: ${response.statusText}`);
     }
-
     const data = await response.json();
-    console.log('Dados recebidos:', data);
 
     return data;
   } catch (error) {
@@ -33,8 +31,6 @@ export const getMealByCategory = async (category: string) => {
     }
 
     const data = await response.json();
-    console.log('Dados recebidos:', data);
-
     return data;
   } catch (error) {
     console.error('Erro ao buscar drinks:', error);

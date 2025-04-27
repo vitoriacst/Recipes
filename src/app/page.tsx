@@ -1,9 +1,9 @@
-import { Login } from '@/components/Login';
+import { LoginForms } from '@/components/LoginForms';
 
-export default function Home() {
+export default function Login() {
   return (
     <section className="flex items-start justify-start p-4">
-      <Login />
+      <LoginForms />
     </section>
   );
 }
