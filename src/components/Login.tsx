@@ -37,7 +37,7 @@ export const Login = () => {
               </button>
             </form>
           </section>
-          <div className="bg-red-900 w-full h-full flex items-center justify-center gap-2 p-4 text-white rounded-md shadow-md">
+          <div className="bg-red-900 w-full h-full flex items-center justify-center gap-2 p-4 text-white rounded-lg shadow-md">
             <section>
               <div className="flex items-center justify-between flex-col gap-2">
                 <h1 className="text-7xl">Saborize</h1>
