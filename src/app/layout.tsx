@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header';
 import { DrinksProvider } from '@/context/DrinksContext';
-import { RecipesProvider } from '@/context/RecipesContext';
+import { FoodsProvider } from '@/context/FoodsContext';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   let test = false;
   return (
-    <RecipesProvider>
+    <FoodsProvider>
       <DrinksProvider>
         <html lang="en">
           <body
@@ -38,6 +38,6 @@ export default function RootLayout({
           </body>
         </html>
       </DrinksProvider>
-    </RecipesProvider>
+    </FoodsProvider>
   );
 }
